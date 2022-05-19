@@ -1,0 +1,79 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        xmlns:viewModel ="clr-namespace:UI.MVVM.ViewModel"
+        mc:Ignorable="d"
+        
+        MinWidth="800"
+        MinHeight="600"
+        Height="600"
+        Width="800"
+        Background="Transparent"
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="None">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="0"
+        ResizeBorderThickness="3">
+            
+        </WindowChrome>
+    </WindowChrome.WindowChrome>
+
+    <Border Name="RoundedCornersBorder" Background="#FFFEFA">
+        
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <ContentControl
+                Grid.Row="1"
+                Content="{Binding CurrentView}"/>
+
+
+            
+            
+            
+            <Border MouseDown="BarMouseDownEvent" Style="{StaticResource WindowTabBarBackground}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="46"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <Image IsHitTestVisible="False" Source="Images/logo1.png" Margin="10,0,10,0" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Menu Grid.Column="1" Background="Transparent" Height="30" >
+                        <RadioButton Content="Simulation" IsChecked="True" Style="{StaticResource MenuRBSelector}" />
+                        <RadioButton Content="Rules" Visibility="{Binding RuleTabVisible}" Style="{StaticResource MenuRBSelector}" Command="{Binding EnableRuleTab}"/>
+                        <RadioButton Content="Pallet" Visibility="{Binding PalletTabVisible}" Style="{StaticResource MenuRBSelector}" Command="{Binding EnablePalletTab}"/>
+                    </Menu>
+                    
+                    <StackPanel Orientation="Horizontal" Grid.Column="3">
+                        <Button Click="OnMinimizeBTNClick" x:Name="MinimizeBTN" Style="{StaticResource WindowFunctionalButton}">
+                            <Image Source="Images/minimize.png"/>
+                        </Button>
+                        <Button Click="OnMaximizeBTNClick" x:Name="MaximizeBTN" Style="{StaticResource WindowFunctionalButton}">
+                            <Image Source="Images/maximize.png"/>
+                        </Button>
+                        <Button Click="OnCloseBTNClick" x:Name="CloseBTN" Style="{StaticResource WindowFunctionalButton}">
+                            <Image Source="Images/Close.png"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            
+        </Grid>
+    </Border>
+
+
+</Window>

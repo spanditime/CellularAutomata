@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CellularAutomata", "CellularAutomata\CellularAutomata.csproj", "{AFC30E09-9977-41FA-9276-6028C093316E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CATEST", "CATEST\CATEST.csproj", "{B69D228E-E5CB-4207-99A7-5AFAD14B1D82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{B3A29CED-C834-489D-96E7-77A89B43584A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFC30E09-9977-41FA-9276-6028C093316E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC30E09-9977-41FA-9276-6028C093316E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC30E09-9977-41FA-9276-6028C093316E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC30E09-9977-41FA-9276-6028C093316E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69D228E-E5CB-4207-99A7-5AFAD14B1D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69D228E-E5CB-4207-99A7-5AFAD14B1D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69D228E-E5CB-4207-99A7-5AFAD14B1D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69D228E-E5CB-4207-99A7-5AFAD14B1D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A29CED-C834-489D-96E7-77A89B43584A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A29CED-C834-489D-96E7-77A89B43584A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A29CED-C834-489D-96E7-77A89B43584A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A29CED-C834-489D-96E7-77A89B43584A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CE8134-7546-404C-9108-F2F5AAF825E5}
+	EndGlobalSection
+EndGlobal
